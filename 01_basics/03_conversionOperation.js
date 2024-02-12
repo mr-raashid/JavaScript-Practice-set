@@ -3,17 +3,17 @@
 let score = "100";
 
 //How to know the typeof??
-console.log(typeof score);
-console.log(typeof(score));
+// console.log(typeof score);
+// console.log(typeof(score));
 
 let valueInNumber = Number(score);
-console.log(typeof valueInNumber);
+// console.log(typeof valueInNumber);
 
 let example1 = "100abc";
 
 let valueInNumber1 = Number(example1);
-console.log(typeof valueInNumber1);
-console.log("Output for conversion of 100abc to number is: " + valueInNumber1);
+// console.log(typeof valueInNumber1);
+// console.log("Output for conversion of 100abc to number is: " + valueInNumber1);
 
 // Conversions
 // "100" => 100
@@ -27,8 +27,8 @@ console.log("Output for conversion of 100abc to number is: " + valueInNumber1);
 let isLoggedIn = 1;
 
 let booleanIsLoggedIn = Boolean(isLoggedIn);
-console.log(typeof booleanIsLoggedIn);
-console.log("Output for conversion of 1 to boolean is: " + booleanIsLoggedIn);
+// console.log(typeof booleanIsLoggedIn);
+// console.log("Output for conversion of 1 to boolean is: " + booleanIsLoggedIn);
 
 
 //Conversions
@@ -40,11 +40,11 @@ console.log("Output for conversion of 1 to boolean is: " + booleanIsLoggedIn);
 
 // Conversion from Boolean,Number,Null,Undefined to String
 
-let someNumber = undefined;
+let someNumber = 50;
 
 let stringNumber = String(someNumber);
-console.log(typeof stringNumber);
-console.log(stringNumber);
+// console.log(typeof stringNumber);
+// console.log(stringNumber);
 
 //Conversions
 // 50 => 50(string)
@@ -53,4 +53,45 @@ console.log(stringNumber);
 // null => null(string)
 // undefined => undefined(string)
 
+// ********************************* Operations ***************************************
 
+let value = 5;
+let negativeValue = -value;
+// console.log(negativeValue);
+
+// console.log(3 + 3);
+// console.log(3 - 3);
+// console.log(3 * 3);
+// console.log(3 / 3);
+// console.log(3 ** 3);
+// console.log(3 % 2);
+
+let str1 = "hello";
+let str2 = " raashid";
+
+let str3 = str1 + str2;
+// console.log(str3);
+
+// console.log("1" + 2);   // output: 12
+// console.log(1 + "2");   // output: 12
+// console.log("1" + 2 + 2); //output: 122
+// console.log(1 + 2 + "2"); //output: 32
+
+
+//Don't write this type of code its just for understanding
+// console.log(+true);     //output: 1
+// console.log(+"");       //output: 0
+
+let num1, num2, num3;
+num1 = num2 = num3 = 2 + 2;
+
+let gameCounter = 250;
+gameCounter++;
+console.log(gameCounter);
+
+//Prefix and Postfix
+//Prefix:
+++i
+
+//Postfix:
+i++;
