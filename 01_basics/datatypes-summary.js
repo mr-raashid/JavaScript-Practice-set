@@ -41,3 +41,13 @@ myLastName = "Raashid";
 console.log(myName);
 console.log(myLastName);
 
+let userOne = {
+    email: "user123@gmail.com",
+    id: 12345
+}
+
+let userTwo = userOne;
+userTwo.id = 112233;
+
+console.log(userOne.id);
+console.log(userTwo.id);
