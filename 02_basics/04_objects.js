@@ -76,3 +76,10 @@ console.log(course.courseInstructor);  // Instead of accessing like this we can 
 
 const {courseInstructor : instructor} = course;
 console.log(instructor);
+
+// JSON format:
+// {
+//     "name": "Rash",
+//     "email": "rash123@intel.com",
+//     "id": 1243
+// }
