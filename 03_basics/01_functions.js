@@ -33,4 +33,13 @@ function loginMsg (userName) {
     }
     return `${userName} just logged in...`;
 }
-console.log(loginMsg("Raashid"));
+console.log(loginMsg("Rash"));
+
+
+// Rest Operator & Spread Operator:
+
+function calculateCartPrice(...num1){
+    return num1;
+}
+
+console.log(calculateCartPrice(100, 200, 300));
