@@ -91,7 +91,7 @@ console.log(gameCounter);
 
 //Prefix and Postfix
 //Prefix:
-++i
+// ++i
 
 //Postfix:
-i++;
+// i++;
