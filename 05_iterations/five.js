@@ -18,5 +18,24 @@ coding.forEach(printMe);
 
 // For-Each has many parameters to pass into it:
 coding.forEach( (item, index, arr) => {
-    console.log(`item of index ${index} is: ${item} and the entire array is`, "+", arr );
+    // console.log(`item of index ${index} is: ${item} and the entire array is`, arr);
+})
+
+const myCoding = [ 
+    {
+        language: "JavaScript",
+        fileName: "js"
+    }, 
+    {
+        language: "Python",
+        fileName: "py"
+    },  
+    {
+        language: "Java",
+        fileName: "java"
+    }
+];
+
+myCoding.forEach( (item) => {
+    console.log(item.language);
 })
