@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Creating a new element with Javscript:
+
+        const createDiv = document.createElement("div");
+        createDiv.className = "first-class";
+        createDiv.id = "main";
+        createDiv.setAttribute("title", "my-div");      // Always cretae attribute like this
+        createDiv.style.backgroundColor = "grey";
+        // createDiv.innerHTML = "Learning Dom";       // Avoid this instead use below method
+        const text = document.createTextNode("my-div");
+        createDiv.appendChild(text);
+        document.body.appendChild(createDiv);
+
+        function myCreation (bgColor, text) {
+            const createH1 = document.createElement("h1");
+            createH1.id = "first-heading";
+            createH1.className = "second-class";
+            const createText = document.createTextNode(`${text}`);
+            createH1.appendChild(createText);
+            createH1.style.backgroundColor = bgColor;
+            createH1.style.textAlign = "center"
+            createDiv.appendChild(createH1);
+        }
+
+        myCreation("Orange", "First-Heading")
+        myCreation("Blue", "Second-Heading")
+        myCreation("Violet", "Third-Heading")
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing Dom</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #ffF;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+    <script>
+        const mainDiv = document.querySelector(".main");
+        // console.log(mainDiv);
+        // console.log(mainDiv.children);
+
+        // console.log(mainDiv.children[0].innerHTML);
+        // console.log(mainDiv.children[1].innerHTML);
+        // console.log(mainDiv.children[2].innerHTML);
+        // console.log(mainDiv.children[3].innerHTML);
+
+        for (let i = 0; i < mainDiv.children.length; i++) {
+            // console.log(mainDiv.children[i].innerHTML);
+        }
+
+        // Selecting first and last child:
+
+        // console.log(mainDiv.firstElementChild);
+        // console.log(mainDiv.lastElementChild);
+    
+        // console.log("NODES: ", mainDiv.childNodes);
+
+        const firstDiv = document.querySelector(".day");
+        console.log(firstDiv);
+        console.log(firstDiv.nextElementSibling);
+
+        // Selection of child to parent:
+        console.log(firstDiv.parentElement);
+
+        const allDiv = document.querySelectorAll(".day");
+        console.log(allDiv);
+
+        allDiv.forEach( (item) => {
+            item.style.backgroundColor = "Orange";
+            item.style.border = "2px solid black";
+            item.style.borderRadius = "7px";
+            item.style.textAlign = "center"
+        })
+
+
+    </script>
+
+</body>
+</html>
