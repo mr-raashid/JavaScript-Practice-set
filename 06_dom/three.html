@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dom</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="languages">
+
+    </ul>
+
+
+
+
+
+    <script>
+        // Creating elements using function:
+        function addLanguage (langName) {
+            const createaLi = document.createElement("li");
+            createaLi.innerHTML = langName    // Avoid this type
+            document.querySelector(".languages").appendChild(createaLi)
+        }
+        addLanguage("Javascript");
+        addLanguage("Python");
+
+        // Creating elements using Optimized way:
+        function addOptiLanguage (langName) {
+           const createaLi = document.createElement("li");
+            createaLi.appendChild(document.createTextNode(`${langName}`));
+            document.querySelector(".languages").appendChild(createaLi)
+        }
+        addOptiLanguage("Java");
+        addOptiLanguage("React");
+
+        // Edit:
+        // Method-01:
+        const secondLang = document.querySelector("li:nth-child(2)");
+        const newLi = document.createElement("li");
+        newLi.appendChild(document.createTextNode("Typescript"));
+        secondLang.replaceWith(newLi);
+
+        // Method-02:
+        const firstLang = document.querySelector("li:first-child");
+        firstLang.outerHTML = "<li>Python</li>"
+
+        // Remove:
+        const lastLang = document.querySelector("li:last-child");
+        lastLang.remove();
+
+
+
+
+    </script>
+</body>
+</html>
