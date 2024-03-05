@@ -9,31 +9,33 @@ let score = "100";
 let valueInNumber = Number(score);
 // console.log(typeof valueInNumber);
 
-let example1 = "100abc";
+let example1 = " ";
 
 let valueInNumber1 = Number(example1);
 // console.log(typeof valueInNumber1);
-// console.log("Output for conversion of 100abc to number is: " + valueInNumber1);
+// console.log("Output for conversion of empty string to number is: " + valueInNumber1);
 
 // Conversions
 // "100" => 100
 // "100abc" => NaN
+// " "(empty space) => 0
 // null => 0
 // undefined => NaN
 // true => 1 / false => 0
 // "Raashid" => NaN
 
 // Conversion from String,Number,Null,Undefined to Boolean;
-let isLoggedIn = 1;
+let isLoggedIn = " ";
 
 let booleanIsLoggedIn = Boolean(isLoggedIn);
 // console.log(typeof booleanIsLoggedIn);
-// console.log("Output for conversion of 1 to boolean is: " + booleanIsLoggedIn);
+// console.log("Output for conversion of empty space to boolean is: " + booleanIsLoggedIn);
 
 
 //Conversions
 // 1 => true / 0 => false
 // "" => false
+// " "(empty space) => true
 // "Raashid" => true
 // null => false
 // undefined => false
