@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" height="200px" id="mountain" src="https://images.pexels.com/photos/20367978/pexels-photo-20367978/free-photo-of-landscape-of-rocky-snowcapped-mountains-and-a-forest-in-a-valley.jpeg"
+                    alt="mountain"></li>
+            <li><img width="200px" height="200px" id="bird" src="https://images.pexels.com/photos/20433278/pexels-photo-20433278/free-photo-of-indian-blue-jay.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="bird"></li>
+            <li><img width="200px" height="200px" id="photoshop" src="https://images.pexels.com/photos/18163082/pexels-photo-18163082/free-photo-of-camera-and-iced-coffee-on-wooden-cafe-table.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="photoshop"></li>
+            <li><img width="200px" height="200px" id="beach" src="https://images.pexels.com/photos/20451936/pexels-photo-20451936/free-photo-of-nazare.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="beach"></li>
+            <li><a style="color: aliceblue;" href="https://www.google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+    <script>
+        //Method-01
+        // document.querySelector("#mountain").onclick = function (){
+        //     alert("Mountain clicked");
+        // }
+
+        // Notes:
+        // attachEvent() - Just like addEventListener.
+        // jQuery - OnEventListener.
+
+        // type, timestamp, preventDefault,
+        // target, toElement, srcElement, currentTarget,
+        // clientX, clientY, screenX, screenY,
+        // altKey, shiftKey, ctrlKey, keyCode
+
+        // document.querySelector("#images").addEventListener("click", function(e){
+        //     console.log("clicked ul")
+        // }, false);
+
+        // document.querySelector("#mountain").addEventListener("click", function(e){
+        //     console.log("Mountain clicked");
+        //     e.stopPropagation();
+        // }, false)
+
+        // Writing true indicates the capturing happens from parent to child.
+        // Writing false indicates the bubbling happens from child to parent.
+        // To avoid bubbling use stopPropagation().
+
+        // document.getElementById("google").addEventListener("click", function(e){
+        //     console.log("Google clicked");
+        //     e.preventDefault();
+        //     e.stopPropagation();
+        // })
+
+        document.getElementById("images").addEventListener("click", function(e){
+            // console.log(e.target.parentNode);
+            // console.log(e.target.tagName);
+            if(e.target.tagName === "IMG"){
+                console.log(e.target.id);
+                let removeIMG = e.target.parentNode;
+                removeIMG.remove();
+                // Another Method:
+                // removeIMG.parentNode.removeChild(removeIMG);
+            }
+        })
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
