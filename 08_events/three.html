@@ -11,16 +11,28 @@
     <button id="stop">Stop</button>
 
     <script>
-        
-        document.querySelector("#start").addEventListener("click", () => {
-            const sayDate = function () {
-                console.log("Hello Rash", Date.now());
+        const randonNumber = function(){
+            let generateNum = Math.floor(Math.random() * 100);
+            console.log(generateNum);
+            return generateNum;
+            
+        }
+        let internalId;
+        const toStart = () => {
+            // console.log("Hi Raashid", Date.now());
+            internalId = setInterval(updating, 2000);
+            function updating(){
+                document.querySelector('h1').innerHTML = randonNumber();
             }
-        })
-        const start = setInterval(sayDate, 2000)
-        document.querySelector("#stop").addEventListener("click", () => {
-            clearInterval(start)
-        })
+        }
+
+        const toStop = () => {
+            clearInterval(internalId);
+            console.log("STOPPED");
+        }
+
+        document.querySelector("#start").addEventListener("click", toStart);
+        document.querySelector("#stop").addEventListener("click", toStop);
     </script>
 </body>
 </html>
